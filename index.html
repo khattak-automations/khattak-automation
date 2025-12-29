@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation Services - Save Time, Grow Faster</title>
+    <meta name="description" content="Professional automation services for Twitter, Blogger, and business workflows. AI-powered solutions that save you 10+ hours per week.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s;
+        }
+        
+        header p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 10px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        /* Stats Section */
+        .stats {
+            background: #f8f9fa;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .stat-item {
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            color: #667eea;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1.1em;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 50px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .service-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .service-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .service-card ul li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .service-card ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .price {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin: 20px 0;
+        }
+        
+        /* Portfolio Section */
+        .portfolio {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .portfolio-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .portfolio-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+            color: white;
+        }
+        
+        .portfolio-content {
+            padding: 30px;
+        }
+        
+        .portfolio-item h3 {
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .portfolio-tags {
+            margin-top: 15px;
+        }
+        
+        .tag {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin: 5px 5px 5px 0;
+        }
+        
+        .result {
+            background: #f0f7ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-weight: 500;
+            color: #667eea;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .testimonial:before {
+            content: '"';
+            font-size: 5em;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            color: #667eea;
+            opacity: 0.2;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+        
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .contact-method {
+            background: rgba(255,255,255,0.1);
+            padding: 20px 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .contact-method a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            header p {
+                font-size: 1.1em;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+            
+            .services-grid,
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header / Hero Section -->
+    <header>
+        <div class="container">
+            <h1>🤖 Automate Your Content, Multiply Your Growth</h1>
+            <p>Professional automation services that save you 10+ hours per week</p>
+            <a href="#contact" class="cta-button">Get Started Free Consultation</a>
+            <a href="#services" class="cta-button cta-secondary">View Services</a>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Hours Saved Per Week</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">200%</span>
+                    <span class="stat-label">Average Engagement Increase</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Automated Posting</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Automation Services</h2>
+            <p class="section-subtitle">Choose the perfect solution for your needs</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">🐦</span>
+                    <h3>Twitter Automation</h3>
+                    <p>Never miss a post again. AI-powered Twitter bot that grows your audience on autopilot.</p>
+                    <ul>
+                        <li>Posts 3-4 times daily automatically</li>
+                        <li>AI-generated engaging content</li>
+                        <li>Trending topics integration</li>
+                        <li>Thread creation for hot topics</li>
+                        <li>Analytics dashboard</li>
+                        <li>GitHub Actions deployment</li>
+                    </ul>
+                    <div class="price">$497 setup + $97/mo</div>
+                    <a href="#contact" class="cta-button">Get Started</a>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">📝</span>
+                    <h3>Blog Automation</h3>
+                    <p>Publish SEO-optimized blog posts daily without lifting a finger.</p>
+                    <ul>
+                        <li>3 posts per day (morning/afternoon/evening)</li>
+                        <li>800-1000 word AI-generated articles</li>
+                        <li>Google Trends integration</li>
+                        <li>Custom image upload</li>
+                        <li>SEO-optimized content</li>
+                        <li>Title bank management</li>
+                    </ul>
+                    <div class="price">$797 setup + $197/mo</div>
+                    <a href="#contact" class="cta-button">Get Started</a>
+                </div>
+
+                <div class="service-card">
+                    <span class="service-icon">🚀</span>
+                    <h3>Complete Automation</h3>
+                    <p>Full multi-platform content automation for serious growth.</p>
+                    <ul>
+                        <li>Twitter + Blog + LinkedIn</li>
+                        <li>Cross-platform content repurposing</li>
+                        <li>Custom brand voice training</li>
+                        <li>Weekly analytics reports</li>
+                        <li>Priority support (2-hour response)</li>
+                        <li>Quarterly strategy sessions</li>
+                    </ul>
+                    <div class="price">$1,497 setup + $397/mo</div>
+                    <a href="#contact" class="cta-button">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Recent Projects</h2>
+            <p class="section-subtitle">Real automation solutions delivering real results</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">🐦</div>
+                    <div class="portfolio-content">
+                        <h3>Twitter Growth Bot</h3>
+                        <p>Automated Twitter account for a SaaS company, posting 4 times daily with AI-generated content and trending topics.</p>
+                        <div class="result">📈 Result: +187% engagement, +2,300 followers in 3 months</div>
+                        <div class="portfolio-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Groq AI</span>
+                            <span class="tag">Twitter API</span>
+                            <span class="tag">GitHub Actions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">📝</div>
+                    <div class="portfolio-content">
+                        <h3>Multi-Blog Automation</h3>
+                        <p>Automated content system managing 5 blogs simultaneously with 3 posts per day, each 800+ words.</p>
+                        <div class="result">⏰ Result: Saved 20 hours/week, increased organic traffic by 150%</div>
+                        <div class="portfolio-tags">
+                            <span class="tag">Blogger API</span>
+                            <span class="tag">AI Content</span>
+                            <span class="tag">Google Trends</span>
+                            <span class="tag">SEO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">🔗</div>
+                    <div class="portfolio-content">
+                        <h3>LinkedIn Lead Generator</h3>
+                        <p>Automated LinkedIn posting and engagement system for B2B company, generating qualified leads daily.</p>
+                        <div class="result">💼 Result: +45 qualified leads/month, 3x connection rate</div>
+                        <div class="portfolio-tags">
+                            <span class="tag">LinkedIn API</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">Lead Gen</span>
+                            <span class="tag">CRM Integration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Clients Say</h2>
+            <p class="section-subtitle">Real feedback from real clients</p>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">"This automation has been a game-changer. I can focus on my business while my Twitter grows on autopilot. Engagement is up 200% and I've gained over 2,000 followers in just 2 months."</p>
+                    <p class="testimonial-author">— Sarah K., SaaS Founder</p>
+                </div>
+
+                <div class="testimonial">
+                    <p class="testimonial-text">"I was spending 15 hours a week on content creation. Now I spend zero and the quality is actually better! The blog automation is incredible. My SEO rankings have improved significantly."</p>
+                    <p class="testimonial-author">— Mike T., Digital Marketer</p>
+                </div>
+
+                <div class="testimonial">
+                    <p class="testimonial-text">"Best investment I've made for my business. The setup was quick, the support is excellent, and the results speak for themselves. My content calendar is full for months ahead."</p>
+                    <p class="testimonial-author">— Jennifer L., Content Creator</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Ready to Automate Your Growth?</h2>
+            <p style="font-size: 1.2em; margin-bottom: 30px;">Book a free 15-minute consultation to see how automation can transform your business</p>
+            
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <p>📧 Email</p>
+                    <a href="mailto:ahmadktk032@gmail.com">ahmadktk032@gmail.com</a>
+                </div>
+                <div class="contact-method">
+                    <p>🐦 Twitter</p>
+                    <a href="https://x.com/ak_1_1_7" target="_blank">Ahmad ktk</a>
+                </div>
+                <div class="contact-method">
+                    <p>💬 WhatsApp</p>
+                    <a href="https://wa.me/923499078300" target="_blank">+92 349 9078300</a>
+                </div>
+            </div>
+            
+            <div style="margin-top: 50px;">
+                <a href="#services" class="cta-button">View Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Automation Services. All rights reserved.</p>
+            <p style="margin-top: 10px; opacity: 0.7;">Powered by AI • Built with ❤️</p>
+        </div>
+    </footer>
+</body>
+</html>
